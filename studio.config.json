@@ -1,0 +1,73 @@
+{
+  "packages": {
+    "dir": "",
+    "menu": [
+      "introduction",
+      [
+        "tokens",
+        [
+          "typography",
+          "colors",
+          "spacing",
+          "elevation",
+          "border-radius",
+          "transition",
+          "z-index",
+          "theme",
+          "sizing"
+        ]
+      ],
+      [
+        "atom", [
+          "accordion",
+          "badge",
+          "badge",
+          "button",
+          "buttonIcon",
+          "buttonIcon",
+          "buttonLink",
+          "cwDropdown",
+          "dropdown",
+          "dropdownMenu",
+          "heading",
+          "icon",
+          "svg",
+          "svgIcon",
+          "text"
+        ]
+      ],
+      [
+        "molecules", [
+          "tooltipWrapper",
+          "tooltipValidation",
+          "listUser"
+        ]
+      ],
+      [
+        "organisms",
+        [
+          "cardPanelTwoColumnToolbar"
+        ]
+      ],
+      [
+        "layout",
+        [
+          "cardPanelTwoColumnSmallLeftSide"
+        ]
+      ],
+      [
+        "infrastructure",
+        [
+          "doc-layout",
+          "types"
+        ]
+      ]
+    ]
+  },
+  "doc": {
+    "markdownEngine": "vue"
+  },
+  "dependencies": {
+    "autoInstall": false
+  }
+}

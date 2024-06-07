@@ -1,0 +1,40 @@
+%font-families {
+  --font-sans-serif: 'sans-serif';
+  --font-lato: 'Lato';
+}
+
+%font-sizes {
+  --font-size-small: 0.75rem; // 12px
+  --font-size-regular: 0.875rem; // 14px
+  --font-size-base: 1rem; // 16px
+  --font-size-desktop-base: $font-size-regular; // 16px
+  --font-size-header: $font-size-base * 1.25; // 20px
+  --font-size-title: 1.438rem; // 23px
+}
+
+%font-weight {
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 500;
+  --font-weight-bold: 700;
+}
+
+%letter-spacing {
+  --letter-spacing-dense: -0.015em;
+  --letter-spacing-normal: normal;
+  --letter-spacing-loose: 0.1em;
+}
+
+%line-height {
+  --line-height-dense: 1.4;
+  --line-height-normal: 1.8;
+  --line-height-loose: 2.2;
+}
+
+%typography {
+  @extend %font-families;
+  @extend %font-sizes;
+  @extend %font-weight;
+  @extend %letter-spacing;
+  @extend %line-height;
+}
