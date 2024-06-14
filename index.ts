@@ -17,3 +17,4 @@ export { default as FilterContent } from '~/cardPanelTwoColumnToolbar/src/Filter
 export { default as ListUser } from '~/listUser/src/ListUser.vue';
 export { default as CwPopup } from '~/popup/src/CwPopup.vue';
 export { default as PopupContainer } from '~/popup/src/PopupContainer.vue';
+export { default as SkeletonItem } from '~/skeleton/src/SkeletonItem.vue';
