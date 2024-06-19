@@ -683,100 +683,178 @@ template: `
 });
 
 
-
-export const SkeletonVERIFICATION = () => ({
+export const SkeletonConsents = () => ({
     components: { SkeletonItem },
     template: `
-    <div class="cec-p-md-6 cec-p-4">
-        <div class="cec-mb-5">
-            <div class="cec-card" v-for="index in 2" :key="index">
-                <div class="cec-p-4">
-                    <div class="row justify-content-between align-items-center flex-md-row-reverse">
-                        <div class="col-md-4 col-12 col-lg-3 d-flex justify-content-between justify-content-md-end align-items-center">
-                            <div class="d-inline-block d-md-none">
-                                <skeleton-item
-                                    class="user-icon-lg my-2"
-                                    radius="lg"
-                                ></skeleton-item>
-                            </div>
-                            <skeleton-item class="skeleton-button" />
-                        </div>
-                        <div class="col-12 col-md-8 col-lg-9 d-flex flex-column">
-                            <div class="d-flex align-items-center">
-                                <div class="cec-mr-3 d-none d-md-inline-block">
-                                    <skeleton-item
-                                        class="user-icon-lg"
-                                        radius="lg"
-                                    ></skeleton-item>
+        <div class="consents-holder">
+            <div class="d-flex cec-mb-4 border-bottom border-bottom-style-dash cec-pl-6 w-100 text-black">
+                <div class="tab-menu cec-py-4 mr-3" v-for="index in 3" :key="index">
+                    <skeleton-item
+                        class="w-90-px"
+                        height="sm"
+                        radius="lg"
+                    ></skeleton-item>
+                </div>
+            </div>
+            <div class="px-md-4 cec-pb-6 border-bottom-sm-down">
+                <div class="consent-user-overview-holder">
+                    <div class="border border-bottom-sm-down border-last-child-none rounded">
+                        <div class="d-flex justify-content-between text-black border-bottom" v-for="index in 5" :key="index">
+                            <div class="d-flex cursor-pointer cec-py-2 cec-pl-4 w-100">
+                                <skeleton-item class="rounded-circle mr-3 img-60-60" :avatar="true" />
+                                <div class="d-flex flex-column py-2 w-full">
+                                    <div class="d-flex flex-column flex-lg-row flex-wrap cec-mb-2">
+                                        <skeleton-item
+                                            class="w-200"
+                                            height="md"
+                                            radius="lg"
+                                        ></skeleton-item>
+                                    </div>
+                                    <div class="text-gray-darker pt-1 font-size-12-sm-down">
+                                        <skeleton-item
+                                            class="w-320" 
+                                            height="sm"
+                                            radius="lg"
+                                        ></skeleton-item>
+                                    </div>
                                 </div>
-                                <skeleton-item
-                                    class="w-150"
-                                    height="sm"
-                                    radius="lg"
-                                ></skeleton-item>
                             </div>
-                            <span class="text-black cec-ml-md-5 cec-pl-md-6">
-                                <skeleton-item
-                                    class="w-320 w-sm-100 cec-my-1"
-                                    height="sm"
-                                    radius="lg"
-                                ></skeleton-item>
-                            </span>
+                            <div class="d-flex cec-pt-5 pr-3">
+                                <div class="dropdown">
+                                    <skeleton-item class="skeleton-icon w-25-px"/>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="cec-mb-5">
-            <skeleton-item
-                class="w-245 cec-mb-4"
-                height="lg"
-                radius="lg"
-            ></skeleton-item>
-            <skeleton-item
-                class="w-320 my-2"
-                height="sm"
-                radius="lg"
-            ></skeleton-item>
-        </div>
-        <div class="cec-card">
-            <div class="cec-p-4">
-                <div class="row justify-content-between align-items-center flex-md-row-reverse">
-                    <div class="col-md-4 col-12 col-lg-3 d-flex justify-content-between justify-content-md-end align-items-center">
-                        <div class="d-inline-block d-md-none">
-                            <skeleton-item
-                                class="user-icon-lg my-2"
-                                radius="lg"
-                            ></skeleton-item>
-                        </div>
-                        <skeleton-item class="skeleton-button" />
-                    </div>
-                    <div class="col-12 col-md-8 col-lg-9 d-flex flex-column">
-                        <div class="d-flex align-items-center">
-                            <div class="cec-mr-3 d-none d-md-inline-block">
-                                <skeleton-item
-                                    class="user-icon-lg"
-                                    radius="lg"
-                                ></skeleton-item>
-                            </div>
-                            <skeleton-item
-                                class="w-150"
-                                height="sm"
-                                radius="lg"
-                            ></skeleton-item>
-                        </div>
-                        <span class="text-black cec-ml-md-5 cec-pl-md-6">
-                            <skeleton-item
-                                class="w-320 w-sm-100 cec-my-1"
-                                height="sm"
-                                radius="lg"
-                            ></skeleton-item>
-                        </span>
+    `,
+});
+
+
+export const SkeletonActivityLog = () => ({
+    components: { SkeletonItem },
+    template: `
+    <div class="activity-log-list">
+        <div class="cec-pt-4 cec-pb-2">
+        <skeleton-item
+            class="w-100-px cec-mb-4"
+            height="sm"
+            radius="lg"
+        ></skeleton-item>
+        <div class="d-md-flex align-items-start cec-mb-4 cec-mb-md-2" v-for="index in 5" :key="index">
+            <div class="cec-mb-3 mb-md-0 w-10 sm-down--width-100 cec-mt-md-6">
+                <skeleton-item
+                    class="w-56-px"
+                    height="sm"
+                    radius="lg"
+                ></skeleton-item>
+            </div>
+            <div class="d-flex border border-radius-10 cec-p-4 cec-ml-md-6 cec-ml-lg-4 w-90 md-down--width-100 align-items-center">
+                <div class="image__wrapper h-auto m-0 loaded">
+                    <skeleton-item class="cw-icon-xxl rounded-circle mr-3" :avatar="true" />
+                </div>
+                <div class="d-flex align-items-center flex-wrap w-100">
+                    <div class="w-100">
+                        <skeleton-item
+                            class="w-50 sm-down--width-100"
+                            height="sm"
+                            radius="lg"
+                        ></skeleton-item>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    `,
+});
 
-        `,
-    });
+
+export const SkeletonMyThreads = () => ({
+    components: { SkeletonItem },
+    template: `
+    <div class="list-group mb-0">
+        <div class="list-group-item border-dash-y border-sm-y">
+            <div class="thread-wrapper cec-pb-2">
+                <div class="d-flex justify-content-between align-items-start card-item">
+                    <div class="d-flex flex-column w-100">
+                        <skeleton-item
+                            class="w-80 cec-my-3"
+                            height="sm"
+                            radius="lg"
+                        ></skeleton-item>
+                        <skeleton-item
+                            class="w-20 w-sm-50 cec-my-2"
+                            height="sm"
+                            radius="lg"
+                        ></skeleton-item>
+                    </div>
+                    <div class="dropdown-three-dots dropdown arrow-indicator">
+                        <skeleton-item class="skeleton-icon w-25-px cec-mt-2"/>
+                    </div>
+                </div>
+                <skeleton-item
+                    class="w-10 w-sm-124-5-px cec-my-3"
+                    height="sm"
+                    radius="lg"
+                ></skeleton-item>
+            </div>
+            <skeleton-item
+                class="w-30 w-sm-70 cec-mb-2"
+                height="sm"
+                radius="lg"
+            ></skeleton-item>
+        </div>
+        <div class="list-group-item border-dash-y border-sm-y">
+    <div class="thread-wrapper">
+        <!---->
+        <div class="d-flex justify-content-between align-items-start card-item">
+            <div>
+                <div class="d-flex">
+                    <a href="javascript:;" class="subject text-decoration-none">asdsfsddasd</a>
+                    <div class="cec-ml-2 cec-py-0 badge badge-pill text-white font-size-8 d-flex align-items-center text-uppercase badge-warning">New</div>
+                </div>
+                <p class="view-tag mb-0"><i class="mr-2">posted in</i><span class="font-weight-bold text-black">ABC</span></p>
+            </div>
+            <div class="dropdown-three-dots dropdown arrow-indicator">
+                <a id="_copForumPortlet_dropdownMenuLinkthread" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="three-dots-icon undefined three-dots-icon--vertical"><span class="icon-dot"></span> <span class="icon-dot"></span> <span class="icon-dot"></span></div>
+                </a>
+                <ul aria-labelledby="_copForumPortlet_dropdownMenuLinkthread" class="dropdown-menu shadow dropdown-menu-right">
+                    <li><a href="javascript:;" class="text-black dropdown-item">Edit</a></li>
+                    <li><a href="javascript:;" class="text-black dropdown-item">Move</a></li>
+                    <li><a href="javascript:;" class="text-black dropdown-item">Unsubscribe</a></li>
+                    <li><a href="javascript:;" class="text-black dropdown-item">Remove</a></li>
+                </ul>
+            </div>
+        </div>
+        <!---->
+        <div class="my-sm-3 mt-1 mb-2 multi-line-text-ellipsis-two short-description font-size-14 description">
+            <div class="cw-editor-display"><p>sdxfvdsfxdfc</p></div>
+        </div>
+    </div>
+    <div class="mt-sm-2 align-items-center view-wrapper">
+        <div class="w-100 item-bottom-container d-sm-block d-flex flex-column-reverse mb-sm-0 mb-1">
+            <div class="d-sm-inline d-flex">
+                <span class="d-sm-inline d-flex align-items-center cec-mr-sm-5 cec-mr-6">
+                    <svg class="lexicon-icon cw-icon d-sm-none d-inline-block mr-2"><use xlink:href="https://org-vireak.crosswired.me/o/cw-cec-theme/images/icons/icons.svg?v=1.0.128#upvote"></use></svg> <span class="mr-0">0</span>
+                    <i class="d-sm-inline d-none">Upvotes</i>
+                </span>
+                <span class="d-sm-inline d-flex align-items-center cec-mr-sm-5 cec-mr-6">
+                    <svg class="lexicon-icon cw-icon d-sm-none d-inline-block mr-2"><use xlink:href="https://org-vireak.crosswired.me/o/cw-cec-theme/images/icons/icons.svg?v=1.0.128#comment"></use></svg> <span class="mr-0">0</span>
+                    <i class="d-sm-inline d-none">Replies</i>
+                </span>
+                <span class="d-sm-inline d-flex align-items-center">
+                    <svg class="lexicon-icon cw-icon d-sm-none d-inline-block mr-2"><use xlink:href="https://org-vireak.crosswired.me/o/cw-cec-theme/images/icons/icons.svg?v=1.0.128#view"></use></svg> <span class="mr-0">1</span>
+                    <i class="d-sm-inline d-none">View</i>
+                </span>
+            </div>
+            <span class="font-size-14 mb-sm-0 mb-2"><i>Created</i> Jun 19, 2024</span>
+        </div>
+    </div>
+</div>
+
+    </div>
+    `,
+});
